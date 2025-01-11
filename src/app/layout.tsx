@@ -27,15 +27,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const initialState = cookieToInitialState(config, headers().get("cookie"));
+  // const initialState = cookieToInitialState(config, headers().get("cookie"));
 
   return (
     <html className={inter.variable} lang="en">
       <body className="bg-black text-white">
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+        {/* {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-        ) : null}
-        <Web3ModalProvider initialState={initialState}>
+        ) : null} */}
+        {/* <Web3ModalProvider initialState={initialState}> */}
+        <Web3ModalProvider>
           {children}
         </Web3ModalProvider>
         <Toaster />
