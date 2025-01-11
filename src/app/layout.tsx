@@ -29,6 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
   cookies: string;
 }) {
+  // New
   const initialState = cookieToInitialState(config, cookies);
 
   return (
