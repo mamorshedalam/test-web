@@ -15,6 +15,11 @@ import TokenoMi from "@/components/privatesale/TokenoMi";
 import { socialLinks } from "@/lib/constants";
 import Link from "next/link";
 
+export async function generateStaticParams() {
+  return [
+    { params: { slug: 'private-sale' } },
+  ];
+}
 export default function PrivateSale() {
   return (
     <>
